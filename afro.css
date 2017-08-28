@@ -22,11 +22,11 @@ nav ul {
     padding: 0%;
     margin: 0%;
     vertical-align: top;
-    display: inline-block;
+    overflow: hidden;
+    list-style-type: none;
 }
 nav li {
   float: left;
-  list-style-type: none;
   padding: 14px 16px;
   display: block;
 }
