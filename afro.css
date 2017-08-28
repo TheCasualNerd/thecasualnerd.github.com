@@ -1,9 +1,6 @@
-#yourafro {
-    padding-left: 30%;
-    padding-right: 30%;
-    padding-top: 5%;
-    max-width: 100%;
-    max-height: 100%;
+#logos {
+    font-family: 'Cantarell', serif;
+    font-style: italic;
 }
 a {
  text-decoration: none;
