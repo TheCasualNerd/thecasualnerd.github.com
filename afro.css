@@ -11,6 +11,7 @@ a {
 }
 nav {
    background: #545451;
+   width: 40px;
 }
 #reviews {
     float: right;
