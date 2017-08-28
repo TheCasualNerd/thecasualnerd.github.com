@@ -1,8 +1,8 @@
-#logos {
+/*#logos {
     font-family: 'Cantarell', serif;
     font-style: italic;
     float: left;
-}
+}*/
 a {
  text-decoration: none;
  font-weight: bold;
@@ -11,7 +11,7 @@ a {
 nav {
    background: #545451;
 }
-#reviews {
+/*#reviews {
     float: right;
     padding-top: 5%;
     padding-left: 10%;
@@ -20,7 +20,7 @@ nav {
     float: right;
     padding-top: 5%;
     padding-right: 10%;
-}
+}*/
 nav ul {
     padding: 0%;
     margin: 0%;
