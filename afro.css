@@ -1,7 +1,6 @@
 #logos {
     font-family: 'Cantarell', serif;
     font-style: italic;
-    padding-top: 5%;
     float: left;
 }
 a {
@@ -11,7 +10,6 @@ a {
 }
 nav {
    background: #545451;
-   height: 40px;
 }
 #reviews {
     float: right;
@@ -26,12 +24,11 @@ nav {
 nav ul {
     padding: 0%;
     margin: 0%;
-    vertical-align: top;
     overflow: hidden;
     list-style-type: none;
 }
 nav li {
- 
+  text-align: center;
   padding: 14px 16px;
   display: block;
 }
