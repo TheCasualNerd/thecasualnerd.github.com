@@ -9,6 +9,7 @@ a {
  text-decoration: none;
  font-weight: bold;
  color: white;
+ display: inline-block;
 }
 nav {
    background: #7C8A83;
