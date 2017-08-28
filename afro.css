@@ -2,6 +2,7 @@
     font-family: 'Cantarell', serif;
     font-style: italic;
     padding-top: 5%;
+    float: left;
 }
 a {
  text-decoration: none;
@@ -12,10 +13,12 @@ nav {
    background: #545451;
 }
 #reviews {
+    float: right;
     padding-top: 5%;
     padding-left: 10%;
 }
 #blog {
+    float: right;
     padding-top: 5%;
     padding-right: 10%;
 }
@@ -27,7 +30,10 @@ nav ul {
     list-style-type: none;
 }
 nav li {
-  float: left;
+ 
   padding: 14px 16px;
   display: block;
+}
+nav li a:hover {
+    background-color: black;
 }
