@@ -10,7 +10,6 @@ a {
 nav {
    background: #545451;
    border-radius: 20px;
-   position: fixed;
    length: 100%;
 }
 nav ul {
