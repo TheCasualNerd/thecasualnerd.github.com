@@ -27,3 +27,8 @@ nav li {
 nav li a:hover {
     color: #5CBFC4;
 }
+@media (max-width: 960px) {
+    nav li {
+        float: left
+    }
+}
