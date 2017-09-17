@@ -1,23 +1,44 @@
-#logos {
-    font-family: 'Cantarell', serif;
-    font-style: italic;
+/* General*/
+body {
+    margin: 0;
+    background:
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px;
 }
 a {
+    text-decoration: none;
+}
+/* Navbar*/
+
+nav a {
  text-decoration: none;
  font-weight: bold;
  color: white;
+ font-size: 15px;
 }
 nav {
    background: #545451;
-   border-radius: 20px;
-   length: 100%;
+   margin: 0px auto;
+   overflow: hidden;
+   position: fixed;
+   top: 0;
+   width: 100%;
+   z-index: 100;
 }
+
 nav ul {
-    padding: 0%;
-    margin: 0%;
-    overflow: hidden;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 0px;
     list-style-type: none;
 }
+
 nav li {
   text-align: center;
   float: right;
@@ -25,10 +46,150 @@ nav li {
   display: block;
 }
 nav li a:hover {
-    color: #5CBFC4;
+    color: #5CBEC4;
+    text-decoration: none;
+    cursor: pointer;
+    animation: hovering 0.1s
+}
+@keyframes hovering {
+    0%{font-size: 15px;}
+    25%{font-size: 16.5px;}
+    50%{font-size: 17.5px;}
+    75%{font-size: 18.5px;}
+    100%{font-size: 20px;}
+}
+@-webkit-keyframes hovering {
+    0%{font-size: 15px;}
+    25%{font-size: 15px;}
+    50%{font-size: 16.66px;}
+    75%{font-size: 18.333px;}
+    100%{font-size: 20px;}
 }
 @media (max-width: 100px) {
-    nav li {
-        float: left
-    }
+    nav li {float: left}
+}
+
+/* Slideshow*/
+.slideshow {
+    margin: auto;
+    padding: 20px;
+    margin-top: 0px;
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+.slides {
+    width: 100%;
+    height: 100%;
+    animation:slideshow 10s infinite
+}
+/* For Safari 4.0 - 8.0 */
+@-webkit-keyframes slideshow {
+    0%{opacity:0}
+    50%{opacity:1}
+    100%{opacity:0}
+}
+
+/* Standard syntax */
+@keyframes slideshow {
+    0%{opacity:0}
+    50%{opacity:1}
+    100%{opacity:0}
+}
+.right_arrow {
+    float:right!important;
+    color: white;
+}
+.right_arrow:hover {
+    color:#000!important;
+    cursor: pointer;
+    background-color:#f0e68c!important
+}
+.left_arrow{
+    float:left!important;
+    color: white;
+}
+.left_arrow:hover {
+    color:#000!important;
+    background-color:#f0e68c!important;
+    cursor: pointer;
+}
+.demo {
+    border: 2px solid black;
+    border-radius: 100px;
+    text-align: center;
+}
+
+
+/*Middle of Page*/
+#logos {
+    font-family: 'Cantarell', serif;
+    font-style: italic;
+}
+.middlepage {
+    background-color: #F3E9CE;
+    margin-top: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.projects {
+    padding: 10px;
+    padding-top: 30px;
+    margin-left: 100px;
+}
+
+.tv {padding-right: 140px; padding-top:30px;}
+.film {padding-left: 165px; padding-top: 30px;}
+
+.cap {
+    font-family: 'Erica+One', serif;
+    font-weight: bold;
+    font-size: 25px;
+    padding-top: 15px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.ps{padding-left:  115px;}
+.ms{padding-left:  130px;}
+.ts{padding-left:  175px;}
+
+.capcap {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 20px;
+    font-style: italic;
+    text-indent: 1em;
+}
+
+.pss {padding-left: 50px;}
+.mss {padding-left: 100px;}
+.tss {padding-left: 135px;}
+
+
+.whatisreal {
+    padding-bottom: 25px;
+}
+.whatis {
+    font-family: "Erica+One", serif;
+    font-weight: bold;
+    padding-top: 50px;
+    font-size: 50px;
+    padding-top: 250px;
+    padding-left: 40px;
+}
+.real {
+    padding-left: 100px;
+    font-size: 25px;
+}
+.about {
+    background-color: #242323;
+    color: white;
+}
+.col-sm-5 p{
+    font-size: 50px;
+    font-family: "Erica+One", serif;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 30px
 }

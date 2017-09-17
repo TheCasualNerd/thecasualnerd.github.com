@@ -2,16 +2,22 @@
 <html>
   <head>
     <title>The Casual Nerd</title>
+
     <link rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Cantarell">
-    
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Erica+One">
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <script src="bootstrap/bootstrap.min.js"></script>
+
+
     <!-- Favicon code-->
       <link rel="stylesheet" type="text/css" href="afro.css">
-      <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-      <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-      <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-      <link rel="manifest" href="manifest.json">
-      <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+      <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+      <link rel="manifest" href="favicons/manifest.json">
+      <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
       <meta name="theme-color" content="#ffffff">
 
   </head>
@@ -20,8 +26,120 @@
       <ul>
         <li style="float: left;"><a href="#" id="logos">The Casual Nerd</a></li>
         <li><a id="reviews">Reviews</a></li>
-        <li><a id="blog">Blog</a></li>
+        <li><a id="projector">Projects</a></li>
       </ul>
     </nav>
+
+    <div class="slideshow" style="max-width:750px; max-height:750px;">
+      <img class="slides" src="img/fringe.jpg" >
+      <img class="slides" src="img/themartian.jpg">
+      <img class="slides" src="img/theflash.jpg">
+      <div class="navigation">
+        <div class="left_arrow" onclick="plusDivs(-1)" style="font-size:180%">&#10094;</div>
+        <div class="right_arrow" onclick="plusDivs(1)" style="font-size:180%">&#10095;</div>
+      </div>
+      <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+        
+        function plusDivs(n) {
+          showDivs(slideIndex += n);
+        }
+        
+        function currentDiv(n) {
+          showDivs(slideIndex = n);
+        }
+        
+        function showDivs(n) {
+          var i;
+          var x = document.getElementsByClassName("slides");
+          if (n > x.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = x.length}
+          for (i = 0; i < x.length; i++) {
+             x[i].style.display = "none";  
+          }
+          x[slideIndex-1].style.display = "block";  
+        }
+        </script>
+    </div>
+    <script>
+      var myIndex = 0;
+      carousel();
+      
+      function carousel() {
+          var i;
+          var x = document.getElementsByClassName("slides");
+          for (i = 0; i < x.length; i++) {
+             x[i].style.display = "none";  
+          }
+          myIndex++;
+          if (myIndex > x.length) {myIndex = 1}    
+          x[myIndex-1].style.display = "block";  
+          setTimeout(carousel, 9000);    
+      }
+      </script>
+      <div class="middlepage">
+        <div class="row logos">
+          <div class="col-sm-4">
+              <img src="logos/blackprojects.png" class="projects"/>
+          </div>
+          <div class="col-sm-4">
+              <img src="logos/blackmovies.png" class="film"/>
+          </div>
+          <div class="col-sm-4">
+              <img src="logos/blacktv.png" class="tv" align="right"/>
+              
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+              <p class="cap ps">Projects</p>                                  
+          </div>
+          <div class="col-sm-4">
+              <p class="cap ms">Movie Reviews</p> 
+            </div>
+          <div class="col-sm-4">
+              <p class="cap ts" >TV Reviews</p>                  
+            </div>          
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <p class="capcap pss">Explore some of the <br />coding projects that I do</p>
+              </div>
+            <div class="col-sm-4">
+                <p class="capcap mss">Reviews ranging from <br/>The Avengers to The Hobbit</p>              
+              </div>
+            <div class="col-sm-4">
+                <p class="capcap tss">Review of TV shows <br/><span>like The Flash or Fringe</span></p> 
+             </div>          
+          </div>
+      <div class="whatisreal">
+        <h1 class="whatis">What is the Casual Nerd?</h1>
+        <p class="real">The Casual Nerd is an organization dedicated to making premium programs and 
+          unbiased reviews of books, TV shows, movies, and more. We operate this website from GitHub 
+          and attend high school. We are also members of the 
+          <a href="https://www.lnstempunks.org" style="color:#025A02">L&N STEMpunks</a>, an FIRST Robotics team. 
+        </p>
+      </div>
+      <div class="about">
+        <div class="row">
+          <div class="col-sm-5">
+            <p>The Casual Nerd</p>
+          </div>
+          <div class="col-sm-1 empty"></div>
+          <div class="col-sm-3">
+              <h3>Social Media</h3>
+              <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+          </div>
+          <div class="col-sm-3">
+            <p>Legal</p>
+            <p><a href="https://goo.gl/forms/h5J2bpPDaDWH0TQv2">Feedback</a></p>
+          </div>
+        </div>
+      </div>
   </body>
 </html>
