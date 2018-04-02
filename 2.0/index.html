@@ -72,8 +72,8 @@
             .lg-statement {
                 color: white;
                 font-family: 'Josefin Slab', serif;
-                font-size: 12vh;
-                margin-top: 25vh;
+                font-size: 9vw;
+                margin-top: 20vh;
                 text-align: center;
             }
             .logo2 {
@@ -154,6 +154,7 @@
             @media screen and (min-device-width: 1400px) and (max-device-width: 1700px) {
                 .heading {
                     margin-left: -10vw;
+                    font-size: 3vw;                    
                 }
                 .last-nav {
                     margin-right: -5vw;
@@ -183,7 +184,7 @@
             }
             @media screen and (min-device-width: 480px) and (max-device-width: 767px) {
                 .heading {
-                    font-size: 4vh;
+                    font-size: 8vw;
                     margin-left: 4vh;
                 }
                 .logo2 {
@@ -191,6 +192,7 @@
                 }
                 .statement, .lg-statement {
                     text-align: center;
+                    font-size: 10vw;
                 }
             
             }
@@ -234,10 +236,15 @@
                 $(".navbar").toggleClass("navbar-shrink", $(this).scrollTop() > 10)
             });
             if ($(window).width() < 767){	
-                $('.col-4').remove()
-                print('Thingie')
-                $('#statements').removeClass("col-8").addClass('col')
+                $('#statements').removeClass("col-8")
             }	
+            $(window).resize(function() {
+                if ($(window).width() < 767){	
+                    $('#statements').removeClass("col-8")
+                } else {
+                    $("#statements").addClass('col-8')
+                }
+            });
         })
     </script>
 
@@ -282,7 +289,11 @@
         </div>
     </div>
     <div class="head_2">
-        <p>asdfghjl;</p>
+        <h1 class="head-2-h1">Who Am I?</h1>
+        <div class="row">
+            <div class="col"><img class="head-2-img" src="img/book-reading-library-literature-159697.jpeg"></div>
+            <div class="col"><p class="head-2-desc">My name is Tyler Duckworth. I am a student searching for a deeper understanding of technology. I create, learn, and work to fulfill my goal of becoming a software engineer.</p><p class="head-2-button">Find out more</p></div>
+        </div>
     </div>
     <br />
     <br />
