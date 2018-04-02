@@ -81,6 +81,9 @@
                 margin-top: 35vh;
                 margin-left: 8vw; 
             }
+            .collapselogo {
+                display: none;
+            }
             /*For mobile devices*/
             @media screen and (max-device-width: 430px) and (orientation: portrait) {
                 .navbar {
@@ -183,17 +186,36 @@
                     font-size: 4vh;
                     margin-left: 4vh;
                 }
+                .logo2 {
+                    display: none;
+                }
+                .statement, .lg-statement {
+                    text-align: center;
+                }
+            
             }
             @media screen and (min-device-width: 384px) and (max-device-width: 479px) {
                 .heading {
                     font-size: 5vh;
                     margin-left: 2vh;
                 }
+                .logo2 {
+                    display: none;
+                }
             }
             @media screen and (max-device-width: 383px) {
                 .heading {
                     font-size: 5vh;
                     margin-left: 1vh;
+                    display: none;
+                }
+                .logo2 {
+                    display: none;
+                }
+                .collapselogo {
+                    margin-left: 4vw;
+                    display: initial;
+                    width: 17.5vw;
                 }
             }
     </style>
@@ -211,6 +233,11 @@
             $(window).scroll(function () {
                 $(".navbar").toggleClass("navbar-shrink", $(this).scrollTop() > 10)
             });
+            if ($(window).width() < 767){	
+                $('.col-4').remove()
+                print('Thingie')
+                $('#statements').removeClass("col-8").addClass('col')
+            }	
         })
     </script>
 
@@ -220,6 +247,7 @@
     <nav class="navbar navbar-expand-lg bg-faded fixed-top">
         <div class="container">
             <a class="navbar-brand heading float-left pull-left" href="#">The Casual Nerd</a>
+            <a href="#" class="collapselogo"><img src="img/goodlogo.svg" class="collapselogo"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                 aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars navbar-toggler-icon"></i>
@@ -244,11 +272,11 @@
     </nav>
     <div class="head_1">
         <div class="row">
-            <div class="col-8 state">
-                    <p class="lg-statement "><b>SIEZE EVERY OPPORTUNITY.</b></p>
-                    <p class="statement">They can take you places beyond your wildest dreams.</p>
+            <div class="col-8 state col-xs-push-6" id="statements">
+                    <p class="lg-statement"><b>SIEZE EVERY OPPORTUNITY.</b></p>
+                    <p class="statement ">They can take you places beyond your wildest dreams.</p>
                 </div>
-            <div class="col-4">
+            <div class="col-4 col-xs-pull-6">
                 <img src="img/goodlogo.svg" class="logo2">                
             </div>
         </div>
