@@ -6,11 +6,12 @@
     <title>The Casual Nerd</title>
     <link rel="icon" type="image/png" href="img/logo.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
     <!-- CSS Links -->
 
     <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Slab|Oswald">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Slab|Oswald|IBM+Plex+Sans+Condensed:200,400">
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     <style type="text/css">
             html,body
@@ -26,7 +27,7 @@
             .navbar {
                 padding: 4vh 0;
                 transition: padding 0.3s;
-                background: rgba(255, 255, 255, 0.5)
+                background: rgba(255, 255, 255, 0.9)
             }
 
             .navbar.navbar-shrink {
@@ -48,7 +49,7 @@
                 font-size:3.5vh;
                 margin-right:1vw;
             }
-            .head_1 {
+            .head-1 {
                 background-image: url("img/tree.jpg");
                 background-size:cover;
                 background-repeat: no-repeat;
@@ -57,13 +58,13 @@
             .navbar-brand {
                 opacity: 1;                
             }
-            .head_2 {
+            .head-2 {
                 background-color: #97DAD7;
             }
             .statement{
                 color: white;
                 font-family: 'Josefin Slab', serif;
-                font-size: 4vw;
+                font-size: 8vh;
                 -webkit-backdrop-filter: blur(50px);
                 text-align: center;
                 margin-right: 6vw;
@@ -72,8 +73,8 @@
             .lg-statement {
                 color: white;
                 font-family: 'Josefin Slab', serif;
-                font-size: 9vw;
-                margin-top: 20vh;
+                font-size: 12.5vh;
+                margin-top: 17.5vh;
                 text-align: center;
             }
             .logo2 {
@@ -83,6 +84,45 @@
             }
             .collapselogo {
                 display: none;
+            }
+            .head-2-h1 {
+                text-align: center;
+                color: white;
+                font-family: "IBM Plex Sans Condensed", serif;
+                font-weight: 400;
+                font-size: 5.5vw;
+                padding-top: 2.5vh;
+            }
+            .head-2-desc {
+                color: white;
+                font-family: "IBM Plex Sans Condensed", serif;
+                font-weight: 200;
+                font-size: 4vw;
+                text-align: left;
+                margin-right: 1vw;
+            }
+            .head-2-button {
+                background-color: #97DAD7;
+                border: 0.25vw solid white;
+                width: 15vw;
+                height: 10vh;
+                text-align: center;
+                color: white;
+                padding-top: 2.5vh;
+                margin-left: 15vw;
+                margin-top: 5vh;
+                transition: all 0.75s ease;
+                -webkit-transition: all 0.75s ease;
+                -moz-transition: all 0.75s ease;
+                -o-transition: all 0.75s ease;
+            }
+            .head-2-button:hover {
+                border-color: #97DAD7;
+                background-color: white;
+                color: #97DAD7;
+            }
+            .head-2-row {
+                margin-top: 4vh;
             }
             /*For mobile devices*/
             @media screen and (max-device-width: 430px) and (orientation: portrait) {
@@ -277,22 +317,44 @@
             </div>
         </div>
     </nav>
-    <div class="head_1">
-        <div class="row">
-            <div class="col-8 state col-xs-push-6" id="statements">
-                    <p class="lg-statement"><b>SIEZE EVERY OPPORTUNITY.</b></p>
-                    <p class="statement ">They can take you places beyond your wildest dreams.</p>
+    <div class="head-1">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-8 state col-xs-push-6 col-md-8" id="statements">
+                        <p class="lg-statement"><b>SIEZE EVERY OPPORTUNITY.</b></p>
+                        <p class="statement ">They can take you places beyond your wildest dreams.</p>
+                    </div>
+                <div class="col-4 col-xs-pull-6 col-md-4">
+                    <img src="img/goodlogo.svg" class="logo2">                
                 </div>
-            <div class="col-4 col-xs-pull-6">
-                <img src="img/goodlogo.svg" class="logo2">                
             </div>
         </div>
     </div>
-    <div class="head_2">
-        <h1 class="head-2-h1">Who Am I?</h1>
-        <div class="row">
-            <div class="col"><img class="head-2-img" src="img/book-reading-library-literature-159697.jpeg"></div>
-            <div class="col"><p class="head-2-desc">My name is Tyler Duckworth. I am a student searching for a deeper understanding of technology. I create, learn, and work to fulfill my goal of becoming a software engineer.</p><p class="head-2-button">Find out more</p></div>
+    <div class="head-2">
+        <div class="container-fluid">
+            <h1 class="head-2-h1">Who Am I?</h1>
+            <hr class="w-75">
+            <div class="row head-2-row">
+                <div class="col-6"><img class="head-2-img img-fluid" src="img/meme.png"></div>
+                <div class="col-6">
+                    <p class="head-2-desc">My name is Tyler Duckworth. I am a student searching for a deeper understanding of technology. I create, learn, and work to achieve my dream of becoming a software engineer.</p>
+                    <p class="head-2-button ">Find out more</p></div>
+            </div>
+        </div>
+    </div>
+    <!--TODO: Add JavaScript that checks for imgs/projects (with an id) 
+        and finds a title and description to add. 
+        It checks how many projects there actually are to prevent broken links. -->
+    <div class="head-3">
+        <div class="container">
+            <h1 class="head-3-h1">What Have I Done?</h1>
+            <p>My work ranges from 3D modeling robots to creating web applications. I regularly post updates of my work on my blog, with can be found <a class="blog-link"><b>here</b></a>.</p>
+            <p>Recent Projects:</p>
+            <div class="pics row">
+                <div class="pic-1"></div>
+                <div class="pic-2"></div>
+                <div class="pic-3"></div>
+            </div>
         </div>
     </div>
     <br />

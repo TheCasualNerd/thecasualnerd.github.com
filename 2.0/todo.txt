@@ -1,0 +1,20 @@
+Created By Tyler Duckworth
+Last Updated April 16 2018
+
+This document will be a list of pending changes that need to be made with full detail as to what they should do.
+
+Project Homepage Display:
+    Investigate using Jekyll to make project pages and subsequently adding them to the homepage.
+    The system will use different icons based on the project type (Some rudimentary categories include: CAD, Robotics, Web, Misc)
+    Example:
+        ________________ ________________ ________________
+        | Project Name  |                |                |
+        |               |                |                |
+        |               |                |                |
+        |     Link      |                |                |
+        ---------------- ---------------- ----------------
+    For the meantime, use placeholder images
+Font sizing:
+    Use only vh, no vw
+    vw will be for padding and margins
+    keep it consistent.
