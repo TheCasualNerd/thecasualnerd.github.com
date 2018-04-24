@@ -11,7 +11,7 @@
     <!-- CSS Links -->
 
     <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Slab|Oswald|IBM+Plex+Sans+Condensed:200,400">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Slab|Oswald|IBM+Plex+Sans+Condensed:200,400|Montserrat|Raleway">
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     <style type="text/css">
             html,body
@@ -63,7 +63,7 @@
             }
             .statement{
                 color: white;
-                font-family: 'Josefin Slab', serif;
+                font-family: 'Raleway', serif;
                 font-size: 8vh;
                 -webkit-backdrop-filter: blur(50px);
                 text-align: center;
@@ -72,7 +72,7 @@
             }
             .lg-statement {
                 color: white;
-                font-family: 'Josefin Slab', serif;
+                font-family: 'Montserrat', serif;
                 font-size: 12.5vh;
                 margin-top: 17.5vh;
                 text-align: center;
@@ -90,14 +90,14 @@
                 color: white;
                 font-family: "IBM Plex Sans Condensed", serif;
                 font-weight: 400;
-                font-size: 5.5vw;
+                font-size: 7vh;
                 padding-top: 2.5vh;
             }
             .head-2-desc {
                 color: white;
                 font-family: "IBM Plex Sans Condensed", serif;
                 font-weight: 200;
-                font-size: 4vw;
+                font-size: 6vh;
                 text-align: left;
                 margin-right: 1vw;
             }
@@ -123,6 +123,10 @@
             }
             .head-2-row {
                 margin-top: 4vh;
+                padding-bottom: 4vh;
+            }
+            .head-2-img {
+                width: 40vw;
             }
             /*For mobile devices*/
             @media screen and (max-device-width: 430px) and (orientation: portrait) {
@@ -321,7 +325,8 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-8 state col-xs-push-6 col-md-8" id="statements">
-                        <p class="lg-statement"><b>SIEZE EVERY OPPORTUNITY.</b></p>
+                        <p class="lg-statement"><b>Seize Every Opportunity</b></p>
+                        <!--Make statement thinner-->
                         <p class="statement ">They can take you places beyond your wildest dreams.</p>
                     </div>
                 <div class="col-4 col-xs-pull-6 col-md-4">
@@ -335,9 +340,10 @@
             <h1 class="head-2-h1">Who Am I?</h1>
             <hr class="w-75">
             <div class="row head-2-row">
+                <!--Redo image to be circular and smaller-->
                 <div class="col-6"><img class="head-2-img img-fluid" src="img/meme.png"></div>
                 <div class="col-6">
-                    <p class="head-2-desc">My name is Tyler Duckworth. I am a student searching for a deeper understanding of technology. I create, learn, and work to achieve my dream of becoming a software engineer.</p>
+                    <p class="head-2-desc">My name is Tyler Duckworth. I am a student in search of a deeper understanding of technology. I create, learn, and work to achieve my dream of becoming a software engineer.</p>
                     <p class="head-2-button ">Find out more</p></div>
             </div>
         </div>
@@ -348,13 +354,13 @@
     <div class="head-3">
         <div class="container">
             <h1 class="head-3-h1">What Have I Done?</h1>
-            <p>My work ranges from 3D modeling robots to creating web applications. I regularly post updates of my work on my blog, with can be found <a class="blog-link"><b>here</b></a>.</p>
-            <p>Recent Projects:</p>
+            <!--Use Gugi font for the picss-->
             <div class="pics row">
                 <div class="pic-1"></div>
                 <div class="pic-2"></div>
                 <div class="pic-3"></div>
             </div>
+            <p>My work ranges from 3D modeling robots to creating web applications. I regularly post updates of my work on my blog, with can be found <a class="blog-link"><b>here</b></a>.</p>
         </div>
     </div>
     <br />
