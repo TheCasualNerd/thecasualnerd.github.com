@@ -11,8 +11,9 @@
     <!-- CSS Links -->
 
     <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Slab|Oswald|IBM+Plex+Sans+Condensed:200,400|Montserrat|Raleway">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Slab|Oswald:200,400|IBM+Plex+Sans+Condensed:200,400|Montserrat|Raleway|Gugi">
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
     <style type="text/css">
             html,body
             {
@@ -47,6 +48,7 @@
                 opacity: 1;
                 font-family: 'Oswald', serif;
                 font-size:3.5vh;
+                font-weight: 100;
                 margin-right:1vw;
             }
             .head-1 {
@@ -64,7 +66,7 @@
             .statement{
                 color: white;
                 font-family: 'Raleway', serif;
-                font-size: 8vh;
+                font-size: 7.5vh;
                 -webkit-backdrop-filter: blur(50px);
                 text-align: center;
                 margin-right: 6vw;
@@ -72,9 +74,9 @@
             }
             .lg-statement {
                 color: white;
-                font-family: 'Montserrat', serif;
-                font-size: 12.5vh;
-                margin-top: 17.5vh;
+                font-family: 'Raleway', serif;
+                font-size: 12vh;
+                margin-top: 20vh;
                 text-align: center;
             }
             .logo2 {
@@ -126,7 +128,120 @@
                 padding-bottom: 4vh;
             }
             .head-2-img {
-                width: 40vw;
+                width: 35vw;
+            }
+            .head-3 {
+                background-color: #2E6DF3;
+                height: 100vh
+            }
+            .head-3-img {
+                margin-right: -1.5vw;
+                margin-top: 6vh;
+            }
+            .head-3-h1 {
+                font-family: 'Gugi', serif;
+                color: white;
+                font-size: 7vh;
+            }
+            .head-3-desc {
+                color: white;
+                font-size: 3.5vh;
+            }
+            .proj {
+                width: 75%;
+                height: 12.5vh;
+                background-color: white;
+                -webkit-transition: margin-left 0.5s ease, box-shadow 0.5s ease;
+                -moz-transition: margin-left 0.5s ease, box-shadow 0.5s ease;
+                -o-transition: margin-left 0.5s ease, box-shadow 0.5s ease;
+                transition: margin-left 0.5s ease, box-shadow 0.5s ease;
+                margin-left: 1.5rem;
+                box-shadow: -0.25vw 0.5vh 0.5em black;
+                -webkit-box-shadow: -0.25vw 0.5vh 0.5em black;
+                -moz-box-shadow: -0.25vw 0.5vh 0.5em black;                
+            }
+            .proj-2, .proj-3 {
+                margin-top: 3vh;
+            }
+            .proj:hover {
+                margin-left: 2.5rem;
+                box-shadow: -0.5vw 0.5vh 1em black;
+            }
+            .head-4 {
+                background-color: #00e676;
+                height: 87.5vh;
+            }
+            .head-4-img {
+                width: 50vw;
+                height: 75vh;
+                padding-top:2vh;
+            }
+            .head-4-h1 {
+                font-family: 'Montserrat', serif;
+                color: white;
+                font-size: 7vh;
+                padding-left: 2vw;
+
+            }
+            .head-4-desc {
+                font-family: 'Oswald', serif;
+                color: white;
+                font-size: 4vh;
+                font-weight: 200;
+                padding-left: 2vw;
+                padding-top:5vh;
+            }
+            .head-4-button {
+                font-family: 'Gugi', serif;
+                background-color: #00e676;
+                border: 0.25vw solid white;
+                width: 15vw;
+                height: 10vh;
+                text-align: center;
+                color: white;
+                padding-top: 2vh;
+                margin-left: 15vw;
+                margin-top: 5vh;
+                transition: all 0.75s ease;
+                -webkit-transition: all 0.75s ease;
+                -moz-transition: all 0.75s ease;
+                -o-transition: all 0.75s ease;
+            }
+            .head-4-button:hover {
+                border-color: #00e676;
+                background-color: white;
+                color: #00e676;
+            }
+            .contain {
+                padding-top: 6vh;
+            }
+            .vr {
+                border-left: 1px solid rgba(34,36,38,.15);
+                height: 3em;
+                margin-top: 3vh;                
+            }
+            footer {
+                background-color: #F07559;
+            }
+            .center {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .i {
+                color: black;
+                transition: color ease 0.25s;
+                font-size: 2.5em;
+            }
+            .i:hover {
+                color: #D8D2DB;
+            }
+            .center-center {
+                margin: 0 1vw 0 1vw;
+            }
+            footer h3 {
+                color: white;
+                font-family: 'Courier New', Courier, monospace;
             }
             /*For mobile devices*/
             @media screen and (max-device-width: 430px) and (orientation: portrait) {
@@ -289,6 +404,8 @@
                     $("#statements").addClass('col-8')
                 }
             });
+            window.sr = ScrollReveal();
+            sr.reveal('.head-2-h1', {duration: 750})
         })
     </script>
 
@@ -336,12 +453,12 @@
         </div>
     </div>
     <div class="head-2">
-        <div class="container-fluid">
+        <div class="container-fluid pb-4">
             <h1 class="head-2-h1">Who Am I?</h1>
             <hr class="w-75">
-            <div class="row head-2-row">
+            <div class="row head-2-row pt-3">
                 <!--Redo image to be circular and smaller-->
-                <div class="col-6"><img class="head-2-img img-fluid" src="img/meme.png"></div>
+                <div class="col-6"><img class="head-2-img img-fluid ml-5" src="img/meme.png"></div>
                 <div class="col-6">
                     <p class="head-2-desc">My name is Tyler Duckworth. I am a student in search of a deeper understanding of technology. I create, learn, and work to achieve my dream of becoming a software engineer.</p>
                     <p class="head-2-button ">Find out more</p></div>
@@ -352,68 +469,52 @@
         and finds a title and description to add. 
         It checks how many projects there actually are to prevent broken links. -->
     <div class="head-3">
-        <div class="container">
-            <h1 class="head-3-h1">What Have I Done?</h1>
-            <!--Use Gugi font for the picss-->
-            <div class="pics row">
-                <div class="pic-1"></div>
-                <div class="pic-2"></div>
-                <div class="pic-3"></div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6">
+                    <h1 class="head-3-h1 mt-4 text-center">What Have I Done?</h1>
+                    <hr class="my-4 mr-3">
+                    <!--Use Gugi font for the picss-->
+                    <p class="head-3-desc lead text-left">My work ranges from 3D modeling robots to creating web applications. I regularly post updates of my work on my blog, with can be found <a class="blog-link"><b>here</b></a>. <br /><br/> Recent Work:</p>
+                    <div class="proj-1 proj"></div>
+                    <div class="proj-2 proj"></div>
+                    <div class="proj-3 proj"></div>
+                </div>
+                <div class="col-6 head-3-img-wrap">
+                    <img src="head-3.jpg" class="head-3-img img-responsive float-right">
+                </div>
             </div>
-            <p>My work ranges from 3D modeling robots to creating web applications. I regularly post updates of my work on my blog, with can be found <a class="blog-link"><b>here</b></a>.</p>
         </div>
     </div>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br /> end test
-
+    <div class="head-4">
+        <div class="container-fluid contain">
+            <div class="row">
+                <div class="col-6"><img src="img/head-4.jpg" class="head-4-img"></div>
+                <div class="col-6">
+                    <h1 class="head-4-h1">What Can I Do?</h1>
+                    <p class="head-4-desc">As far as speciality and specific skill sets go, I have not settled on one yet, I am still discovering. But no matter what, I will pursue whatever project I have with a burning curiosity and diligent work ethic.</p>
+                    <p class="head-4-desc">If you have an idea for a project, or want to enlist me to help you:</p>
+                    <p class="head-4-button">Contact Me <i class="fas fa-arrow-right pl-2 pt-2" style="font-size: 1.75em;"></i></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer container-fluid">
+        <div class="row pb-2 pt-2">
+            <div class="col-6">
+                <h3 class="text-center">Social Links</h3>
+                <div class="center">
+                    <i class="fab fa-github-alt fa-2x i"></i>
+                    <i class="fab fa-twitter center-center fa-2x i"></i>
+                    <i class="fab fa-medium-m fa-2x i"></i>
+                </div>
+            </div>
+            <div class="vr col-1"></div>
+            <div class="col-5">
+                <h3 class="pt-4">Sitemap</h3>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
