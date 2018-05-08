@@ -22,18 +22,13 @@
                 padding: 0px;
                 overflow-x: hidden; 
             }
-            .carousel-indicators > li {
-                box-shadow: 2.5px 2.5px 2.5px grey;
-            }
+            .carousel-indicators > li {box-shadow: 2.5px 2.5px 2.5px grey;}
             .navbar {
                 padding: 4vh 0;
                 transition: padding 0.3s;
                 background: rgba(255, 255, 255, 0.9)
             }
-
-            .navbar.navbar-shrink {
-                padding: 2vh 0;
-            }
+            .navbar.navbar-shrink {padding: 2vh 0;}
             .heading {
                 font-family: 'Josefin Slab', serif;
                 font-size: 5vh;
@@ -52,17 +47,12 @@
                 margin-right:1vw;
             }
             .head-1 {
-                background-image: url("img/tree.jpg");
                 background-size:cover;
                 background-repeat: no-repeat;
                 height: 100vh;
             }
-            .navbar-brand {
-                opacity: 1;                
-            }
-            .head-2 {
-                background-color: #97DAD7;
-            }
+            .navbar-brand {opacity: 1;}
+            .head-2 {background-color: #97DAD7;}
             .statement{
                 color: white;
                 font-family: 'Raleway', serif;
@@ -84,9 +74,7 @@
                 margin-top: 35vh;
                 margin-left: 8vw; 
             }
-            .collapselogo {
-                display: none;
-            }
+            .collapselogo {display: none;}
             .head-2-h1 {
                 text-align: center;
                 color: white;
@@ -127,9 +115,7 @@
                 margin-top: 4vh;
                 padding-bottom: 4vh;
             }
-            .head-2-img {
-                width: 35vw;
-            }
+            .head-2-img {width: 35vw;}
             .head-3 {
                 background-color: #2E6DF3;
                 height: 100vh
@@ -160,9 +146,7 @@
                 -webkit-box-shadow: -0.25vw 0.5vh 0.5em black;
                 -moz-box-shadow: -0.25vw 0.5vh 0.5em black;                
             }
-            .proj-2, .proj-3 {
-                margin-top: 3vh;
-            }
+            .proj-2, .proj-3 {margin-top: 3vh;}
             .proj:hover {
                 margin-left: 2.5rem;
                 box-shadow: -0.5vw 0.5vh 1em black;
@@ -181,7 +165,6 @@
                 color: white;
                 font-size: 7vh;
                 padding-left: 2vw;
-
             }
             .head-4-desc {
                 font-family: 'Oswald', serif;
@@ -212,17 +195,13 @@
                 background-color: white;
                 color: #00e676;
             }
-            .contain {
-                padding-top: 6vh;
-            }
+            .contain {padding-top: 6vh;}
             .vr {
                 border-left: 1px solid rgba(34,36,38,.15);
                 height: 3em;
                 margin-top: 3vh;                
             }
-            footer {
-                background-color: #F07559;
-            }
+            footer {background-color: #F07559;}
             .center {
                 display: flex;
                 align-items: center;
@@ -233,15 +212,26 @@
                 transition: color ease 0.25s;
                 font-size: 2.5em;
             }
-            .i:hover {
-                color: #D8D2DB;
-            }
-            .center-center {
-                margin: 0 1vw 0 1vw;
-            }
+            .i:hover {color: #D8D2DB;}
+            .center-center {margin: 0 1vw 0 1vw;}
             footer h3 {
                 color: white;
                 font-family: 'Courier New', Courier, monospace;
+            }
+            .sr {visibility: hidden;}
+            .head-1 canvas {
+                display: block;
+                vertical-align: bottom;
+            }
+            #particles-js{ 
+                position:absolute; 
+                width: 100%; 
+                height: 100%; 
+                background-color: #00356B; 
+                background-image: url(""); 
+                background-repeat: no-repeat; 
+                background-size: cover; 
+                background-position: 50% 50%; 
             }
             /*For mobile devices*/
             @media screen and (max-device-width: 430px) and (orientation: portrait) {
@@ -405,8 +395,8 @@
                 }
             });
             window.sr = ScrollReveal();
-            sr.reveal('.head-2-h1', {duration: 750})
-        })
+            sr.reveal('.sr', {duration: 750})
+        }) 
     </script>
 
 </head>
@@ -439,6 +429,7 @@
         </div>
     </nav>
     <div class="head-1">
+        <div id="particles-js"></div>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-8 state col-xs-push-6 col-md-8" id="statements">
@@ -454,14 +445,14 @@
     </div>
     <div class="head-2">
         <div class="container-fluid pb-4">
-            <h1 class="head-2-h1">Who Am I?</h1>
+            <h1 class="head-2-h1 sr">Who Am I?</h1>
             <hr class="w-75">
             <div class="row head-2-row pt-3">
                 <!--Redo image to be circular and smaller-->
                 <div class="col-6"><img class="head-2-img img-fluid ml-5" src="img/meme.png"></div>
                 <div class="col-6">
-                    <p class="head-2-desc">My name is Tyler Duckworth. I am a student in search of a deeper understanding of technology. I create, learn, and work to achieve my dream of becoming a software engineer.</p>
-                    <p class="head-2-button ">Find out more</p></div>
+                    <p class="head-2-desc sr">My name is Tyler Duckworth. I am a student in search of a deeper understanding of technology. I create, learn, and work to achieve my dream of becoming a software engineer.</p>
+                    <p class="head-2-button sr">Find out more</p></div>
             </div>
         </div>
     </div>
@@ -472,13 +463,13 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-6">
-                    <h1 class="head-3-h1 mt-4 text-center">What Have I Done?</h1>
-                    <hr class="my-4 mr-3">
+                    <h1 class="head-3-h1 sr mt-4 text-center">What Have I Done?</h1>
+                    <hr class="my-4 mr-3 sr">
                     <!--Use Gugi font for the picss-->
-                    <p class="head-3-desc lead text-left">My work ranges from 3D modeling robots to creating web applications. I regularly post updates of my work on my blog, with can be found <a class="blog-link"><b>here</b></a>. <br /><br/> Recent Work:</p>
-                    <div class="proj-1 proj"></div>
-                    <div class="proj-2 proj"></div>
-                    <div class="proj-3 proj"></div>
+                    <p class="head-3-desc lead text-left sr">My work ranges from 3D modeling robots to creating web applications. I regularly post updates of my work on my blog, with can be found <a class="blog-link"><b>here</b></a>. <br /><br/> Recent Work:</p>
+                    <div class="proj-1 proj sr"></div>
+                    <div class="proj-2 proj sr"></div>
+                    <div class="proj-3 proj sr"></div>
                 </div>
                 <div class="col-6 head-3-img-wrap">
                     <img src="head-3.jpg" class="head-3-img img-responsive float-right">
@@ -491,10 +482,10 @@
             <div class="row">
                 <div class="col-6"><img src="img/head-4.jpg" class="head-4-img"></div>
                 <div class="col-6">
-                    <h1 class="head-4-h1">What Can I Do?</h1>
-                    <p class="head-4-desc">As far as speciality and specific skill sets go, I have not settled on one yet, I am still discovering. But no matter what, I will pursue whatever project I have with a burning curiosity and diligent work ethic.</p>
-                    <p class="head-4-desc">If you have an idea for a project, or want to enlist me to help you:</p>
-                    <p class="head-4-button">Contact Me <i class="fas fa-arrow-right pl-2 pt-2" style="font-size: 1.75em;"></i></p>
+                    <h1 class="head-4-h1 sr">What Can I Do?</h1>
+                    <p class="head-4-desc sr">As far as speciality and specific skill sets go, I have not settled on one yet, I am still discovering. But no matter what, I will pursue whatever project I have with a burning curiosity and diligent work ethic.</p>
+                    <p class="head-4-desc sr">If you have an idea for a project, or want to enlist me to help you:</p>
+                    <p class="head-4-button sr">Contact Me <i class="fas fa-arrow-right pl-2 pt-2" style="font-size: 1.75em;"></i></p>
                 </div>
             </div>
         </div>
@@ -502,7 +493,7 @@
     <footer class="footer container-fluid">
         <div class="row pb-2 pt-2">
             <div class="col-6">
-                <h3 class="text-center">Social Links</h3>
+                <h3 class="text-center sr">Social Links</h3>
                 <div class="center">
                     <i class="fab fa-github-alt fa-2x i"></i>
                     <i class="fab fa-twitter center-center fa-2x i"></i>
@@ -511,10 +502,13 @@
             </div>
             <div class="vr col-1"></div>
             <div class="col-5">
-                <h3 class="pt-4">Sitemap</h3>
+                <h3 class="pt-4 sr">Sitemap</h3>
             </div>
         </div>
     </footer>
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script type="text/javascript" src="home-particles.js"></script>
+
 </body>
 
 </html>
