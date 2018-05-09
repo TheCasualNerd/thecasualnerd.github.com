@@ -1,0 +1,26 @@
+{
+  "name": "thecasualnerd.github.io",
+  "version": "1.0.0",
+  "description": "TheCasualNerd",
+  "main": "navbars.js",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheCasualNerd/thecasualnerd.github.io.git"
+  },
+  "keywords": [
+    "tcn"
+  ],
+  "author": "Tyler Duckworth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheCasualNerd/thecasualnerd.github.io/issues"
+  },
+  "homepage": "https://github.com/TheCasualNerd/thecasualnerd.github.io#readme"
+}
