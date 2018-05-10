@@ -1,0 +1,136 @@
+            /*For mobile devices*/
+            @media screen and (max-device-width: 430px) and (orientation: portrait) {
+                .navbar {
+                    padding: 5vh 0;
+                }
+
+                .navbar.navbar-shrink {
+                    padding: 2vh 0;
+                }
+                .heading {
+                    font-size: 3vh;
+                    margin-left: 3vh;
+                }
+                .navbar-toggler {
+                    font-size: 2em;
+                }
+                .navbar-collapse {
+                    margin-left: 10vw;
+                }
+                .d-none {
+                    display: none !important;
+                }
+                .head-1-logo {display: none;}
+            }
+            @media screen and (max-device-width:575px) and (min-device-width:401px){
+                .navbar-collapse {
+                    margin-left: 10vw;
+                } 
+                .d-none {
+                    display: block !important;
+                }
+                .caption-desc {
+                    display: none !important;
+                }
+            }
+            /*For larger screens*/
+            @media screen and (min-device-width: 850px) {
+                .navbar-toggler {
+                    font-size: 5vw;
+                }
+                .nav-link {
+                    font-size: 3.5vh;
+                    margin-right: 0vw !important;
+                }
+                .heading {
+                    margin-left: -15vw;
+                }
+                .last-nav {
+                    margin-right: -10vw;
+                }
+            }
+            @media screen and (min-device-width: 500px) and (max-device-width: 1049px) {
+                .heading {
+                    margin-left: 0vw;
+                }
+                .last-nav {
+                    margin-right: -2.5vw;
+                }
+            }
+            @media screen and (min-device-width: 1050px) and (max-device-width: 1400px) {
+                .heading {
+                    margin-left: -5vw;
+                }
+                .last-nav {
+                    margin-right: -2.5vw;
+                }
+            }
+            @media screen and (min-device-width: 1400px) and (max-device-width: 1700px) {
+                .heading {
+                    margin-left: -10vw;
+                    font-size: 3vw;                    
+                }
+                .last-nav {
+                    margin-right: -5vw;
+                }
+            }
+            /*For devices in landscape mode.*/
+            @media screen and (orientation: landscape) and (max-device-width:812px){
+                .heading {
+                    font-size: 4vw;
+                }
+                .nav-link {
+                    font-size: 3vw;
+                    margin-right: 0vw !important;
+                }
+                .navbar-toggler {
+                    font-size: 5vw;
+                }
+                .navbar.navbar-shrink {
+                    padding: 2vh 0;
+                }
+                .d-none {
+                    display: block !important;
+                }
+                .caption-desc {
+                    display: none !important;
+                }
+            }
+            @media screen and (min-device-width: 480px) and (max-device-width: 767px) {
+                .heading {
+                    font-size: 8vw;
+                    margin-left: 4vh;
+                }
+                .logo2 {
+                    display: none;
+                }
+                .statement, .lg-statement {
+                    text-align: center;
+                    font-size: 10vw;
+                }
+            
+            }
+            @media screen and (min-device-width: 384px) and (max-device-width: 479px) {
+                .heading {
+                    font-size: 5vh;
+                    margin-left: 2vh;
+                }
+                .logo2 {
+                    display: none;
+                }
+            }
+            @media screen and (max-device-width: 383px) {
+                .heading {
+                    font-size: 5vh;
+                    margin-left: 1vh;
+                    display: none;
+                }
+                .logo2 {
+                    display: none;
+                }
+                .collapselogo {
+                    margin-left: 4vw;
+                    display: initial;
+                    width: 17.5vw;
+                }
+            }

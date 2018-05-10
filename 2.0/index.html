@@ -61,6 +61,7 @@
                 text-align: center;
                 margin-right: 6vw;
                 margin-left: 6vw;
+                margin-bottom: -1em;
             }
             .lg-statement {
                 color: white;
@@ -80,25 +81,25 @@
                 color: white;
                 font-family: "IBM Plex Sans Condensed", serif;
                 font-weight: 400;
-                font-size: 7vh;
-                padding-top: 2.5vh;
+                font-size: 2.5em;
+                padding-top: 0.5em;
             }
             .head-2-desc {
                 color: white;
                 font-family: "IBM Plex Sans Condensed", serif;
                 font-weight: 200;
-                font-size: 6vh;
+                font-size: 2.5em;
                 text-align: left;
                 margin-right: 1vw;
             }
             .head-2-button {
                 background-color: #97DAD7;
-                border: 0.25vw solid white;
-                width: 15vw;
-                height: 10vh;
+                border: 2px solid white;
+                width: 10em;
+                height: 4em;
                 text-align: center;
                 color: white;
-                padding-top: 2.5vh;
+                padding-top: 1em;
                 margin-left: 15vw;
                 margin-top: 5vh;
                 transition: all 0.75s ease;
@@ -127,11 +128,11 @@
             .head-3-h1 {
                 font-family: 'Gugi', serif;
                 color: white;
-                font-size: 7vh;
+                font-size: 2.5em;
             }
             .head-3-desc {
                 color: white;
-                font-size: 3.5vh;
+                font-size: 1.5em;
             }
             .proj {
                 width: 75%;
@@ -163,28 +164,29 @@
             .head-4-h1 {
                 font-family: 'Montserrat', serif;
                 color: white;
-                font-size: 7vh;
+                font-size: 2.5em;
                 padding-left: 2vw;
             }
             .head-4-desc {
                 font-family: 'Oswald', serif;
                 color: white;
-                font-size: 4vh;
+                font-size: 1.75em;
                 font-weight: 200;
                 padding-left: 2vw;
-                padding-top:5vh;
+                padding-top:1em;
             }
             .head-4-button {
                 font-family: 'Gugi', serif;
                 background-color: #00e676;
-                border: 0.25vw solid white;
-                width: 15vw;
-                height: 10vh;
+                border: 2px solid white;
+                width: 10em;
+                height: 4em;
                 text-align: center;
                 color: white;
-                padding-top: 2vh;
+                padding-top: 0.75em;
                 margin-left: 15vw;
-                margin-top: 5vh;
+                margin-top: 1.5em;
+                margin-bottom: 1.5em;
                 transition: all 0.75s ease;
                 -webkit-transition: all 0.75s ease;
                 -moz-transition: all 0.75s ease;
@@ -225,113 +227,16 @@
             }
             #particles-js{ 
                 position:absolute; 
-                width: 100%; 
-                height: 100%; 
+                width: 100vw; 
+                height: 100vh; 
                 background-color: #00356B; 
                 background-image: url(""); 
                 background-repeat: no-repeat; 
                 background-size: cover; 
                 background-position: 50% 50%; 
             }
-            /*For mobile devices*/
-            @media screen and (max-device-width: 430px) and (orientation: portrait) {
-                .navbar {
-                    padding: 5vh 0;
-                }
-
-                .navbar.navbar-shrink {
-                    padding: 2vh 0;
-                }
-                .heading {
-                    font-size: 3vh;
-                    margin-left: 3vh;
-                }
-                .navbar-toggler {
-                    font-size: 2em;
-                }
-                .navbar-collapse {
-                    margin-left: 10vw;
-                }
-                .d-none {
-                    display: none !important;
-                }
-                .head-1-logo {display: none;}
-            }
-            @media screen and (max-device-width:575px) and (min-device-width:401px){
-                .navbar-collapse {
-                    margin-left: 10vw;
-                } 
-                .d-none {
-                    display: block !important;
-                }
-                .caption-desc {
-                    display: none !important;
-                }
-            }
-            /*For larger screens*/
-            @media screen and (min-device-width: 850px) {
-                .navbar-toggler {
-                    font-size: 5vw;
-                }
-                .nav-link {
-                    font-size: 3.5vh;
-                    margin-right: 0vw !important;
-                }
-                .heading {
-                    margin-left: -15vw;
-                }
-                .last-nav {
-                    margin-right: -10vw;
-                }
-            }
-            @media screen and (min-device-width: 500px) and (max-device-width: 1049px) {
-                .heading {
-                    margin-left: 0vw;
-                }
-                .last-nav {
-                    margin-right: -2.5vw;
-                }
-            }
-            @media screen and (min-device-width: 1050px) and (max-device-width: 1400px) {
-                .heading {
-                    margin-left: -5vw;
-                }
-                .last-nav {
-                    margin-right: -2.5vw;
-                }
-            }
-            @media screen and (min-device-width: 1400px) and (max-device-width: 1700px) {
-                .heading {
-                    margin-left: -10vw;
-                    font-size: 3vw;                    
-                }
-                .last-nav {
-                    margin-right: -5vw;
-                }
-            }
-            /*For devices in landscape mode.*/
-            @media screen and (orientation: landscape) and (max-device-width:812px){
-                .heading {
-                    font-size: 4vw;
-                }
-                .nav-link {
-                    font-size: 3vw;
-                    margin-right: 0vw !important;
-                }
-                .navbar-toggler {
-                    font-size: 5vw;
-                }
-                .navbar.navbar-shrink {
-                    padding: 2vh 0;
-                }
-                .d-none {
-                    display: block !important;
-                }
-                .caption-desc {
-                    display: none !important;
-                }
-            }
-            @media screen and (min-device-width: 480px) and (max-device-width: 767px) {
+            .social, .sitemap {font-size:1.5em; text-align:center;}
+            @media screen and (max-device-width: 767px) {
                 .heading {
                     font-size: 8vw;
                     margin-left: 4vh;
@@ -341,33 +246,31 @@
                 }
                 .statement, .lg-statement {
                     text-align: center;
-                    font-size: 10vw;
                 }
-            
-            }
-            @media screen and (min-device-width: 384px) and (max-device-width: 479px) {
-                .heading {
-                    font-size: 5vh;
-                    margin-left: 2vh;
+                .statement{font-size:2em;}
+                .lg-statement{font-size:2.5em;}
+                .navbar-collapse {
+                    margin-left: 10vw;
                 }
-                .logo2 {
+                .head-1 {
+                    height: 100vh;
+                }
+                .head-2-img {
                     display: none;
                 }
-            }
-            @media screen and (max-device-width: 383px) {
-                .heading {
-                    font-size: 5vh;
-                    margin-left: 1vh;
-                    display: none;
+                .head-2-desc {
+                    font-size: 1.5em;
                 }
-                .logo2 {
-                    display: none;
+                .head-3-img {display:none;}
+                .head-3-h1 {font-size:2em;}
+                .head-3-desc{font-size: 1.1em;}
+                .proj {
+                    width: 85%;
                 }
-                .collapselogo {
-                    margin-left: 4vw;
-                    display: initial;
-                    width: 17.5vw;
-                }
+                .head-4-img {display:none;}
+                .head-4-h1{font-size:1.5em; text-align: center;}
+                .head-4-desc{font-size: 1.5em;}
+                .vr{display: none;}
             }
     </style>
 
@@ -385,13 +288,27 @@
                 $(".navbar").toggleClass("navbar-shrink", $(this).scrollTop() > 10)
             });
             if ($(window).width() < 767){	
-                $('#statements').removeClass("col-8")
+                $('#statements').removeClass("col-8");
+                $('.head-3-img-wrap').removeClass('col-6');
+                $('.head-4-img-wrap').removeClass('col-6');
+                $('.vr').removeClass('col-1');
+                $('.sitemap-wrap').removeClass('col-5');
             }	
             $(window).resize(function() {
                 if ($(window).width() < 767){	
                     $('#statements').removeClass("col-8")
+                    $('.head-3-img-wrap').removeClass('col-6');
+                    $('.head-4-img-wrap').removeClass('col-6');
+                    $('.vr').removeClass('col-1');
+                    $('.sitemap-wrap').removeClass('col-5');
+
                 } else {
                     $("#statements").addClass('col-8')
+                    $('.head-3-img-wrap').addClass('col-6');
+                    $('.head-4-img-wrap').removeClass('col-6');
+                    $('.vr').addClass('col-1');
+                    $('.sitemap-wrap').addClass('col-5');
+
                 }
             });
             window.sr = ScrollReveal();
@@ -432,12 +349,12 @@
         <div id="particles-js"></div>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-8 state col-xs-push-6 col-md-8" id="statements">
-                        <p class="lg-statement"><b>Seize Every Opportunity</b></p>
+                <div class="col-8 state col-xs-12 col-md-8 col-xl-8" id="statements">
+                        <p class="lg-statement"><b>Sieze Every Opportunity</b></p>
                         <!--Make statement thinner-->
                         <p class="statement ">They can take you places beyond your wildest dreams.</p>
                     </div>
-                <div class="col-4 col-xs-pull-6 col-md-4">
+                <div class="col-4 col-md-4 col-xl-4">
                     <img src="img/goodlogo.svg" class="logo2">                
                 </div>
             </div>
@@ -449,8 +366,8 @@
             <hr class="w-75">
             <div class="row head-2-row pt-3">
                 <!--Redo image to be circular and smaller-->
-                <div class="col-6"><img class="head-2-img img-fluid ml-5" src="img/meme.png"></div>
-                <div class="col-6">
+                <div class="col-md-6 col-xl-6"><img class="head-2-img img-fluid ml-5" src="img/meme.png"></div>
+                <div class="col-md-6 col-xl-6 col-sm-12 col-xs-12">
                     <p class="head-2-desc sr">My name is Tyler Duckworth. I am a student in search of a deeper understanding of technology. I create, learn, and work to achieve my dream of becoming a software engineer.</p>
                     <p class="head-2-button">Find out more</p></div>
             </div>
@@ -462,7 +379,7 @@
     <div class="head-3">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-6">
+                <div class="col-md-6 col-xl-6 col-xs-12 col-sm-12">
                     <h1 class="head-3-h1 sr mt-4 text-center">What Have I Done?</h1>
                     <hr class="my-4 mr-3 sr">
                     <!--Use Gugi font for the picss-->
@@ -480,8 +397,8 @@
     <div class="head-4">
         <div class="container-fluid contain">
             <div class="row">
-                <div class="col-6"><img src="img/head-4.jpg" class="head-4-img"></div>
-                <div class="col-6">
+                <div class="col-6 head-4-img-wrap"><img src="img/head-4.jpg" class="head-4-img"></div>
+                <div class="col-md-6 col-xl-6 col-xs-12 col-sm-12">
                     <h1 class="head-4-h1 sr">What Can I Do?</h1>
                     <p class="head-4-desc sr">As far as speciality and specific skill sets go, I have not settled on one yet, I am still discovering. But no matter what, I will pursue whatever project I have with a burning curiosity and diligent work ethic.</p>
                     <p class="head-4-desc sr">If you have an idea for a project, or want to enlist me to help you:</p>
@@ -492,8 +409,8 @@
     </div>
     <footer class="footer container-fluid">
         <div class="row pb-2 pt-2">
-            <div class="col-6">
-                <h3 class="text-center sr">Social Links</h3>
+            <div class="col-md-6 col-lg-6 col-xl-6 col-xs-12 col-sm-12 social-wrap">
+                <h3 class="text-center sr social">Social Links</h3>
                 <div class="center">
                     <i class="fab fa-github-alt fa-2x i"></i>
                     <i class="fab fa-twitter center-center fa-2x i"></i>
@@ -501,8 +418,8 @@
                 </div>
             </div>
             <div class="vr col-1"></div>
-            <div class="col-5">
-                <h3 class="pt-4 sr">Sitemap</h3>
+            <div class="col-md-5 col-lg-5 col-xl-5 sitemap-wrap">
+                <h3 class="pt-4 sr sitemap">Sitemap</h3>
             </div>
         </div>
     </footer>
