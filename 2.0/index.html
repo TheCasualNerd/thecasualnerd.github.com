@@ -61,13 +61,12 @@
                 text-align: center;
                 margin-right: 6vw;
                 margin-left: 6vw;
-                margin-bottom: -1em;
             }
             .lg-statement {
                 color: white;
                 font-family: 'Raleway', serif;
                 font-size: 12vh;
-                margin-top: 20vh;
+                margin-top: 2em;
                 text-align: center;
             }
             .logo2 {
@@ -184,7 +183,7 @@
                 text-align: center;
                 color: white;
                 padding-top: 0.75em;
-                margin-left: 15vw;
+                margin-left: 17.5vw;
                 margin-top: 1.5em;
                 margin-bottom: 1.5em;
                 transition: all 0.75s ease;
@@ -197,7 +196,7 @@
                 background-color: white;
                 color: #00e676;
             }
-            .contain {padding-top: 6vh;}
+            .contain {padding-top: 1em;}
             .vr {
                 border-left: 1px solid rgba(34,36,38,.15);
                 height: 3em;
@@ -234,9 +233,20 @@
                 background-repeat: no-repeat; 
                 background-size: cover; 
                 background-position: 50% 50%; 
+                z-index: -1;
             }
             .social, .sitemap {font-size:1.5em; text-align:center;}
+            .head1-mb-img, .head2-mb-img {
+                display:none;
+                content: '';
+            }
+            .head1-mb-img.img-active{display: block;height:5em;margin-left:37.5%;}
+            .head2-mb-img.img-active{display: block;height:8em;margin-left:30%}
+
             @media screen and (max-device-width: 767px) {
+                .head-1 .row {
+                    padding-top:8em;
+                }
                 .heading {
                     font-size: 8vw;
                     margin-left: 4vh;
@@ -248,18 +258,17 @@
                     text-align: center;
                 }
                 .statement{font-size:2em;}
-                .lg-statement{font-size:2.5em;}
+                .lg-statement{font-size:2.5em;margin-top:0.5em;}
                 .navbar-collapse {
                     margin-left: 10vw;
                 }
-                .head-1 {
-                    height: 100vh;
-                }
+
                 .head-2-img {
                     display: none;
                 }
                 .head-2-desc {
                     font-size: 1.5em;
+                    text-align: center;
                 }
                 .head-3-img {display:none;}
                 .head-3-h1 {font-size:2em;}
@@ -271,6 +280,7 @@
                 .head-4-h1{font-size:1.5em; text-align: center;}
                 .head-4-desc{font-size: 1.5em;}
                 .vr{display: none;}
+                .head-2-button, .head-4-button{margin-left:4em;}
             }
     </style>
 
@@ -292,6 +302,7 @@
                 $('.head-3-img-wrap').removeClass('col-6');
                 $('.head-4-img-wrap').removeClass('col-6');
                 $('.vr').removeClass('col-1');
+                $('.head1-mb-img,.head2-mb-img').addClass('img-active');
                 $('.sitemap-wrap').removeClass('col-5');
             }	
             $(window).resize(function() {
@@ -301,18 +312,18 @@
                     $('.head-4-img-wrap').removeClass('col-6');
                     $('.vr').removeClass('col-1');
                     $('.sitemap-wrap').removeClass('col-5');
-
+                    $('.head1-mb-img,.head2-mb-img').addClass('img-active');
                 } else {
                     $("#statements").addClass('col-8')
                     $('.head-3-img-wrap').addClass('col-6');
                     $('.head-4-img-wrap').removeClass('col-6');
                     $('.vr').addClass('col-1');
                     $('.sitemap-wrap').addClass('col-5');
-
+                    $('.head1-mb-img,.head2-mb-img').removeClass('img-active');
                 }
             });
             window.sr = ScrollReveal();
-            sr.reveal('.sr', {duration: 750})
+            sr.reveal('.sr', {duration: 1000})
         }) 
     </script>
 
@@ -349,8 +360,9 @@
         <div id="particles-js"></div>
         <div class="container-fluid">
             <div class="row">
+                <img src="img/goodlogo.svg" class="head1-mb-img">    
                 <div class="col-8 state col-xs-12 col-md-8 col-xl-8" id="statements">
-                        <p class="lg-statement"><b>Sieze Every Opportunity</b></p>
+                        <p class="lg-statement"><b>Seize Every Opportunity</b></p>
                         <!--Make statement thinner-->
                         <p class="statement ">They can take you places beyond your wildest dreams.</p>
                     </div>
@@ -364,6 +376,7 @@
         <div class="container-fluid pb-4">
             <h1 class="head-2-h1 sr">Who Am I?</h1>
             <hr class="w-75">
+            <img src="img/meme.png" class="head2-mb-img">    
             <div class="row head-2-row pt-3">
                 <!--Redo image to be circular and smaller-->
                 <div class="col-md-6 col-xl-6"><img class="head-2-img img-fluid ml-5" src="img/meme.png"></div>
