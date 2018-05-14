@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>The Casual Nerd</title>
+    <link rel="icon" type="image/png" href="../img/logo.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+    <link rel="manifest" href="../favicon/site.webmanifest">
+    <link rel="mask-icon" href="../favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="theme-color" content="#ffffff">
+    
+    
+    <!-- CSS Links -->
+
+    <link rel="stylesheet" href="../libs/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Slab|Oswald:200,400|IBM+Plex+Sans+Condensed:200,400|Montserrat|Raleway|Gugi">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <link rel="stylesheet" href="../styles.css">
+    <style type="text/css">
+        .projects-1 {
+            width: 100vw;
+        }
+        .project-1-img {
+            width: 100vw;
+            margin-bottom: -3.53em;
+        }
+        .project-1-h1 {
+            text-align: center;
+            transform: translateY(-50vh);
+        }
+    </style>
+
+    <!-- JavaScript Links -->
+
+    <script src="../libs/jquery/jquery-3.3.1.min.js"></script>
+    <script src="../libs/jquery/jquery-ui.min.js"></script>
+
+    <script src="../libs/bootstrap/js/tether.min.js"></script>
+    <script src="../libs/bootstrap/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                $(".navbar").toggleClass("navbar-shrink", $(this).scrollTop() > 10)
+            });
+            if ($(window).width() < 767){	
+                $('#statements').removeClass("col-8");
+                $('.head-3-img-wrap').removeClass('col-6');
+                $('.head-4-img-wrap').removeClass('col-6');
+                $('.vr').removeClass('col-1');
+                $('.head1-mb-img,.head2-mb-img').addClass('img-active');
+                $('.sitemap-wrap').removeClass('col-5');
+            }	
+            $(window).resize(function() {
+                if ($(window).width() < 767){	
+                    $('#statements').removeClass("col-8")
+                    $('.head-3-img-wrap').removeClass('col-6');
+                    $('.head-4-img-wrap').removeClass('col-6');
+                    $('.vr').removeClass('col-1');
+                    $('.sitemap-wrap').removeClass('col-5');
+                    $('.head1-mb-img,.head2-mb-img').addClass('img-active');
+                } else {
+                    $("#statements").addClass('col-8')
+                    $('.head-3-img-wrap').addClass('col-6');
+                    $('.head-4-img-wrap').removeClass('col-6');
+                    $('.vr').addClass('col-1');
+                    $('.sitemap-wrap').addClass('col-5');
+                    $('.head1-mb-img,.head2-mb-img').removeClass('img-active');
+                }
+            });
+            window.sr = ScrollReveal();
+            sr.reveal('.sr', {duration: 1000})
+        }) 
+    </script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-faded fixed-top">
+        <div class="container">
+            <a class="navbar-brand heading float-left pull-left" href="#">The Casual Nerd</a>
+            <a href="#" class="collapselogo"><img src="img/goodlogo.svg" class="collapselogo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars navbar-toggler-icon"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">Portfolio</a>
+                    </li>
+                    <li class="nav-item last-nav">
+                        <a class="nav-link">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="projects-1">
+        <img src="../img/projects.jpg" class="project-1-img">
+        <h1 class="project-1-h1">Projects</h1>
+    </div>
+    <footer class="footer container-fluid">
+        <div class="row pb-2 pt-2">
+            <div class="col-md-6 col-lg-6 col-xl-6 col-xs-12 col-sm-12 social-wrap">
+                <h3 class="text-center sr social">Social Links</h3>
+                <div class="center">
+                    <a href="https://github.com/Tyler-Duckworth"><i class="fab fa-github-alt fa-2x i"></i></a>
+                    <a href="https://twitter.com/tduck_15"><i class="fab fa-twitter center-center fa-2x i"></i></a>
+                    <a href="https://medium.com/@tyler.duck02"><i class="fab fa-medium-m fa-2x i"></i></a>
+                </div>
+            </div>
+            <div class="vr col-1"></div>
+            <div class="col-md-5 col-lg-5 col-xl-5 sitemap-wrap">
+                <h3 class="pt-4 sr sitemap">Sitemap</h3>
+            </div>
+        </div>
+    </footer>
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script type="text/javascript" src="home-particles.js"></script>
+
+</body>
+
+</html>
