@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>The Casual Nerd</title>
+    <title>The Casual Nerd - Projects</title>
     <link rel="icon" type="image/png" href="../img/logo.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -21,21 +21,95 @@
     <!-- CSS Links -->
 
     <link rel="stylesheet" href="../libs/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Slab|Oswald:200,400|IBM+Plex+Sans+Condensed:200,400|Montserrat|Raleway|Gugi">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Slab|Oswald:200,400|IBM+Plex+Sans+Condensed:200,400|Montserrat|Raleway|Gugi|Tajawal:200">
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
     <link rel="stylesheet" href="../styles.css">
     <style type="text/css">
         .projects-1 {
-            width: 100vw;
+            background-size: cover;
+            height: 100vh;
+            margin-top:10.5em;
+            background-image: url("../img/code.jpeg")
         }
-        .project-1-img {
-            width: 100vw;
-            margin-bottom: -3.53em;
-        }
+
         .project-1-h1 {
             text-align: center;
-            transform: translateY(-50vh);
+            color: black;
+            font-family: Tajawal, 'serif';
+            padding-top: 15%;
+            font-size: 5em;
+        }
+        .projects-2 {
+            background-color:#2474E0;
+            margin-bottom: -1em;
+        }
+        .parallaxParent {
+            height: 100vh;
+            overflow: hidden;
+        }
+        .parallaxParent > * {
+            height: 100%;
+            position: relative; 
+            top: -50%
+        }
+        .navbar-brand {
+            font-size: 2.25em;
+        }
+        .nav-link{
+            font-size:1.5em;
+        }
+        #threed, #wd {
+            font-weight: bolder;
+            font-size: 1.25em;
+        }
+        .projects-2-a {
+            text-decoration: none;
+            font-weight: bolder;
+            transition: color 0.5s ease;
+        }
+        .projects-2-a:hover {
+            text-decoration: none;
+            font-weight: bolder;
+            color: #B3FFFF;
+        }
+        #svg1 {
+            height: 250px;
+            padding-left: 5.5em;
+        }
+        #svg1-caption {
+            text-align:center;
+            font-family: 'Tajawal', serif;
+            font-size: 2em;
+        }
+        #svg2, #svg3 {
+            height: 215px;
+            padding-top:2em;
+            padding-left:7.5em;
+        }
+        #svg2-caption, #svg3-caption {
+            font-family: 'Tajawal', serif;
+            font-size: 2em;
+            text-align: center;
+            padding-top: 1.25em;
+        }
+        .col-4:nth-child(2) {
+            border-style: solid;
+            border-width: 0px 1px 0px;
+            border-color: #A6A6A6;
+        }
+        .s0 .row {
+            margin-top:1em;
+            margin-bottom: 1em;
+        }
+        .projects-2 > p {
+            color: white;
+            font-family: Tajawal, 'serif';
+            font-size: 1.5em;
+            text-align: center;
+        }
+        #proj-2-p1 {
+            padding-top:1em;
         }
     </style>
 
@@ -44,11 +118,17 @@
     <script src="../libs/jquery/jquery-3.3.1.min.js"></script>
     <script src="../libs/jquery/jquery-ui.min.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+
+    <script src="../libs/snap.svg-min.js"></script>
     <script src="../libs/bootstrap/js/tether.min.js"></script>
     <script src="../libs/bootstrap/js/bootstrap.min.js"></script>
 
     <script>
-        $(document).ready(function () {
+            $(document).ready(function () {
             $(window).scroll(function () {
                 $(".navbar").toggleClass("navbar-shrink", $(this).scrollTop() > 10)
             });
@@ -87,7 +167,7 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-faded fixed-top">
         <div class="container">
-            <a class="navbar-brand heading float-left pull-left" href="#">The Casual Nerd</a>
+            <a class="navbar-brand heading float-left pull-left" href="../index.html">The Casual Nerd</a>
             <a href="#" class="collapselogo"><img src="img/goodlogo.svg" class="collapselogo"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                 aria-expanded="false" aria-label="Toggle navigation">
@@ -96,26 +176,55 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link">Projects</a>
+                        <a class="nav-link" href="#">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link">Blog</a>
+                        <a class="nav-link" href="#">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link">Portfolio</a>
+                        <a class="nav-link" href="../portfolio.html">Portfolio</a>
                     </li>
-                    <li class="nav-item last-nav">
+                    <li class="nav-item last-nav" href="#">
                         <a class="nav-link">About</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="projects-1">
-        <img src="../img/projects.jpg" class="project-1-img">
-        <h1 class="project-1-h1">Projects</h1>
+    <div class="parallaxParent" id="parallax1">
+        <div class="projects-1">
+            <h1 class="project-1-h1">Projects</h1>
+        </div>
     </div>
-    <footer class="footer container-fluid">
+    <div class="projects-one-half spacer s0 container-fluid">
+        <div class="row">
+                <div class="col-4">
+                    <figure>
+                        <svg id="svg1" class="pull-left"></svg>
+                        <figcaption id="svg1-caption">The Casual Nerd <i class="fas fa-arrow-right pl-2 pt-2" style="font-size: 1em;"></i></figcaption>
+                    </figure>
+                </div>
+                <div class="col-4">
+                    <figure>
+                        <img src="../img/svg/cube.svg" id="svg2"></img>
+                        <figcaption id="svg2-caption">2018 CAD Work <i class="fas fa-arrow-right pl-2 pt-2" style="font-size: 1em;"></i></figcaption>
+                    </figure>
+                </div>
+                <div class="col-4">
+                    <figure>
+                        <img src="../img/svg/settings.svg" id="svg3"></img>
+                        <figcaption id="svg3-caption">2018 Robot Code <i class="fas fa-arrow-right pl-2 pt-2" style="font-size: 1em;"></i></figcaption>
+                    </figure>
+                </div>
+            </div>
+    </div>
+    <div class="projects-2 spacer s1">
+        <p id="proj-2-p1">
+            I try to diversify my work so that it covers different areas of technology from <span id="threed">3D Modeling</span> to <span id="wd">web development</span>.
+        </p>
+        <p id="proj-2-p2">Most projects are ways for me to experiment and learn about a technology or framework. You can see my though process when making these things on <a class="projects-2-a">my blog</a>.</p>
+    </div>
+    <footer class="footer container-fluid rellax">
         <div class="row pb-2 pt-2">
             <div class="col-md-6 col-lg-6 col-xl-6 col-xs-12 col-sm-12 social-wrap">
                 <h3 class="text-center sr social">Social Links</h3>
@@ -132,8 +241,33 @@
         </div>
     </footer>
     <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script type="text/javascript" src="home-particles.js"></script>
 
+    <script type="text/javascript">
+        var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: 'onEnter', duration: '200%'}});
+		new ScrollMagic.Scene({triggerElement: "#parallax1"})
+										.setTween("#parallax1 > div", {y: "50%", ease: Linear.easeNone})
+                                        .addTo(controller);
+        var svg1 = Snap('#svg1');
+        var x_center = window.innerWidth/9;
+        var x_centers = window.innerWidth/9.75;
+        var y_center = (window.innerHeight*0.25)/1.75;
+        var s1_circle = svg1.circle(125, 125, 100).attr({
+            fill: '#FF5300'
+        });
+        var s1_texts = svg1.text(25, 152.5, '</>').attr({
+            fill: '#FF7B3D',
+            "font-size": '125px',
+            'font-family': "'Josefin Slab', serif",
+            'z-index':'2'
+        });
+        console.log(document.getElementById("#svg1"));
+        var s1_text = svg1.text(20, 155, '</>').attr({
+            fill: '#fff',
+            "font-size": '125px',
+            'font-family': "'Josefin Slab', serif",
+            'z-index': '3'
+        });
+    </script>
 </body>
 
 </html>

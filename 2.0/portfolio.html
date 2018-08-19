@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>The Casual Nerd - Projects</title>
+    <link rel="icon" type="image/png" href="../img/logo.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="theme-color" content="#ffffff">
+    
+    
+    <!-- CSS Links -->
+
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Slab|Oswald:200,400|IBM+Plex+Sans+Condensed:200,400|Montserrat|Raleway|Gugi|Tajawal:200">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <style type="text/css">
+    .port-bkgnd-h1 {
+        background-color: rgba(255, 255, 255, 0.15);
+        height: 100vh;
+        width: 100vw;
+        text-align: center;
+        font-family: 'Tajawal', serif;
+        font-size: 5em;
+        padding-top: 45vh;
+        position: fixed;
+    }
+    .port-bkgnd {
+        background-image: url("img/portfolio.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+        height: 100vh;
+        z-index: -1;
+    }
+    #port-1 {
+        background-color: beige;
+        width: 500px;
+        height: 500px;
+        position:relative;
+        z-index:3;
+        margin-left: 5em;
+    }
+    </style>
+
+    <!-- JavaScript Links -->
+
+    <script src="libs/jquery/jquery-3.3.1.min.js"></script>
+    <script src="libs/jquery/jquery-ui.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+
+    <script src="libs/snap.svg-min.js"></script>
+    <script src="libs/bootstrap/js/tether.min.js"></script>
+    <script src="libs/bootstrap/js/bootstrap.min.js"></script>
+
+    <script>
+            $(document).ready(function () {
+            $(window).scroll(function () {
+                $(".navbar").toggleClass("navbar-shrink", $(this).scrollTop() > 10)
+            });
+            if ($(window).width() < 767){	
+                $('#statements').removeClass("col-8");
+                $('.vr').removeClass('col-1');
+                $('.sitemap-wrap').removeClass('col-5');
+            }	
+            $(window).resize(function() {
+                if ($(window).width() < 767){	
+                    $('#statements').removeClass("col-8")
+                    $('.vr').removeClass('col-1');
+                    $('.sitemap-wrap').removeClass('col-5');
+                } else {
+                    $("#statements").addClass('col-8')
+                    $('.vr').addClass('col-1');
+                    $('.sitemap-wrap').addClass('col-5');
+                }
+            });
+            window.sr = ScrollReveal();
+            sr.reveal('.sr', {duration: 1000})
+        }) 
+    </script>
+    
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-faded fixed-top">
+        <div class="container">
+            <a class="navbar-brand heading float-left pull-left" href="../index.html">The Casual Nerd</a>
+            <a href="#" class="collapselogo"><img src="img/goodlogo.svg" class="collapselogo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars navbar-toggler-icon"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects/projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item" href="#">
+                        <a class="nav-link">Portfolio</a>
+                    </li>
+                    <li class="nav-item last-nav" href="#">
+                        <a class="nav-link">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="port-bkgnd" id="pb">
+        <h1 class="port-bkgnd-h1">Portfolio</h1>
+    </div>
+    <div id="port-1" class="port-1 box"></div>
+    <footer class="footer container-fluid rellax">
+        <div class="row pb-2 pt-2">
+            <div class="col-md-6 col-lg-6 col-xl-6 col-xs-12 col-sm-12 social-wrap">
+                <h3 class="text-center sr social">Social Links</h3>
+                <div class="center">
+                    <a href="https://github.com/Tyler-Duckworth"><i class="fab fa-github-alt fa-2x i"></i></a>
+                    <a href="https://twitter.com/tduck_15"><i class="fab fa-twitter center-center fa-2x i"></i></a>
+                    <a href="https://medium.com/@tyler.duck02"><i class="fab fa-medium-m fa-2x i"></i></a>
+                </div>
+            </div>
+            <div class="vr col-1"></div>
+            <div class="col-md-5 col-lg-5 col-xl-5 sitemap-wrap">
+                <h3 class="pt-4 sr sitemap">Sitemap</h3>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript">
+        var ratio = 0;
+        var percentage = 0;
+        var max_ratio = 0.75;
+        var callback = function(entries) {
+            Array.prototype.forEach.call(entries, function(entry){console.log(entry);})
+        }
+        var observer = new IntersectionObserver(callback, {
+            threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
+        });
+        // window.addEventListener('scroll', function(e) {
+            var target = document.querySelector(".box");
+            observer.observe(target);
+        // })
+
+        function updateFilter(percent) {
+            document.getElementById('pb').style.filter = `blur(${percent*10}px) grayscale(${percent})`;
+        }
+    </script>
+</body>
+
+</html>
